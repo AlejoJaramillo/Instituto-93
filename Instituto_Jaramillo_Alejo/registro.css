@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    flex-direction: row;
+    background: rgb(5,87,158);
+    background: linear-gradient(90deg, rgba(5,87,158,1) 15%, rgba(30,115,190,1) 59%, rgba(57,151,234,1) 100%);
+}
+
+.imagen {
+    flex: 1;
+    padding: 20px;
+}
+
+.formulario {
+    flex: 2;
+    padding: 20px;
+    background: rgb(7,79,151);
+    background: linear-gradient(90deg, rgba(7,79,151,1) 15%, rgba(30,110,191,1) 59%, rgba(59,149,239,1) 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+h1, label {
+    color: black; 
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group label {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.registro-link a {
+    text-decoration: none;
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #005bb5;
+}

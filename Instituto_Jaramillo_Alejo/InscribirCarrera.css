@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 95px;  
+    margin-left: 35px;
+    font-size: 18px;
+    color: white;
+    background: rgb(7,79,151);
+    background: linear-gradient(90deg, rgba(7,79,151,1) 15%, rgba(30,110,191,1) 59%, rgba(59,149,239,1) 100%);
+  }
+
+  header {
+    border-bottom: 1px solid black; 
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(7,79,151); 
+    padding: 10px;  
+    color: white;  
+    display: flex;
+    align-items: center;
+  }
+
+  header img {
+    width: 3%; 
+    height: auto; 
+    margin-right: 16px;
+  }
+
+  label[required]:after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+  }
+
+  input[required], select[required], textarea[required] {
+    border: 1px solid red;
+    box-shadow: 0 0 5px red;
+  }
