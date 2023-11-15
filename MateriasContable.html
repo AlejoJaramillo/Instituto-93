@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción materias de Contable</title>
+    <link rel="stylesheet" href="/plugins/bootstrap-5.3.1/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="InscribirCarrera.css">
+</head>
+<body>
+
+    <header>
+        <img src="/images/ESCUDO_WEB.png" alt="Escudo">
+        <h1>Inscripción de Alumnos</h1>
+        
+        <br><br>
+    
+    </header>
+
+        <h2>DATOS DEL ALUMNO</h2>
+        <form class="DatosDelAlumno">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" onblur="validarLetras('apellidos')"required>
+    
+            <br><br>
+    
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" onblur="validarLetras('nombres')"required>
+    
+            <br><br>
+    
+            <label for="tipoDocumentoId">Tipo de Documento:</label>
+            <select id="tipoDocumentoId" name="tipoDocumentoId" required>
+                <option value="dni">DNI</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
+    
+            <br><br>
+    
+            <label for="numeroDocumento">Número de Documento:</label>
+            <input type="number" id="numeroDocumento" name="numeroDocumento" onblur="validarNumeros('numeroDocumento')" required>
+    
+            <br><br>
+    
+            <label for="estadoCivilId">Estado Civil:</label>
+            <select id="estadoCivilId" name="estadoCivilId">
+                <option value="soltero">Soltero/a</option>
+                <option value="casado">Casado/a</option>
+                <option value="soltero">Divorciado/a</option>
+                <option value="casado">Viudo/a</option>
+            </select>
+    
+            <br><br>
+    
+            <label for="sexo">Sexo:</label>
+            <input type="text" id="sexo" name="sexo" onblur="validarLetras('sexo')">
+    
+            <br><br>
+    
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+    
+            <br><br>
+    
+            <label for="localidadNacimiento">Localidad de Nacimiento:</label>
+            <select id="localidadNacimiento" name="localidadNacimiento">
+                <option value="San Vicente">San Vicente</option>
+                <option value="Alejandro Korn">Alejandro Korn</option>
+                <option value="Glew">Glew</option>
+                <option value="Guernica">Guernica</option>
+            </select>
+    
+            <br><br>
+    
+            <label for="paisNacionalidadId">País de Nacionalidad:</label>
+            <select id="paisNacionalidadId" name="paisNacionalidadId">
+                <option value="Argentina">Argentina</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Chile">Chile</option>
+                <option value="Peru">Peru</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Paraguay">Paraguay</option>
+            </select>
+    
+            <br><br>
+    
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle">
+    
+            <br><br>
+    
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" name="altura">
+    
+            <br><br>
+    
+            <label for="piso">Piso:</label>
+            <input type="text" id="piso" name="piso">
+    
+            <br><br>
+    
+            <label for="departamento">Departamento:</label>
+            <input type="text" id="departamento" name="departamento">
+    
+            <br><br>
+    
+            <label for="provinciaId">Provincia:</label>
+            <select id="provinciaId" name="provinciaId">
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Santa Fe">Santa Fe</option>
+            </select>
+    
+            <br><br>
+    
+            <label for="distrito">Distrito:</label>
+            <input type="text" id="distrito" name="distrito">
+    
+            <br><br>
+    
+            <label for="localidadId">Localidad:</label>
+            <select id="localidadId" name="localidadId">
+                <option value="San Vicente">San Vicente</option>
+                <option value="Alejandro Korn">Alejandro Korn</option>
+                <option value="Glew">Glew</option>
+                <option value="Guernica">Guernica</option>
+            </select>
+    
+            <br><br>
+    
+            <label for="codigoPostal">Código Postal:</label>
+            <input type="text" id="codigoPostal" name="codigoPostal">
+    
+            <br><br>
+    
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" onblur="validarNumeros('telefono')">
+    
+            <br><br>
+    
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular" onblur="validarNumeros('celular')">
+    
+            <br><br>
+     
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+    
+            <br><br>
+        </form> 
+
+
+
+
+        <h2>FORMACIÓN</h2>
+        <form class="Formacion">
+             
+                <label>¿Posee título secundario?</label>
+                <input type="radio" id="siTituloSecundario" name="tituloSecundario" value="Si" onclick="gestionarCampos()"> Sí
+                <input type="radio" id="noTituloSecundario" name="tituloSecundario" value="No" checked onclick="gestionarCampos()"> No
+        
+                <br><br>
+         
+                <label for="materiasAdeuda">Materias Adeudadas:</label>
+                <input type="number" id="materiasAdeuda" name="materiasAdeuda" required>
+        
+                <br><br>
+         
+                <label for="descripcionMaterias">Descripción de Materias Adeudadas:</label>
+                <input type="text" id="descripcionMaterias" name="descripcionMaterias" required>
+        
+                <br><br>
+         
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+        
+                <br><br>
+         
+                <label for="orientacion">Orientación:</label>
+                <input type="text" id="orientacion" name="orientacion" required>
+        
+                <br><br>
+         
+                <label for="otorgadoPor">Otorgado Por:</label>
+                <input type="text" id="otorgadoPor" name="otorgadoPor" required>
+        
+                <br><br>
+         
+                <label for="anioEgreso">Año de Egreso:</label>
+                <input type="number" id="anioEgreso" name="anioEgreso" required onblur="validarNumeros('anioEgreso')">
+        
+                <br><br>
+         
+                <label for="promedio">Promedio:</label>
+                <input type="number" id="promedio" name="promedio" required onblur="validarNumeros('promedio')">
+        
+                <br><br>
+         
+                <label>¿Posee título en trámite?</label>
+                <input type="radio" id="siTituloTramite" name="tituloTramite" value="Si"> Sí
+                <input type="radio" id="noTituloTramite" name="tituloTramite" value="No" checked> No
+        
+                <br><br>
+         
+                <label>Mayor Título:</label>
+                <input type="radio" id="terciario" name="mayorTitulo" value="Terciario" onclick="gestionarCampos()"> Terciario
+                <input type="radio" id="universitario" name="mayorTitulo" value="Universitario" onclick="gestionarCampos()"> Universitario
+                <input type="radio" id="posgrado" name="mayorTitulo" value="Posgrado" onclick="gestionarCampos()"> Posgrado
+            
+                <br><br>
+            
+                <label for="otroTitulo">Otro Título:</label>
+                <input type="text" id="otroTitulo" name="otroTitulo">
+            
+                <br><br>
+            
+                <label for="mayorOtorgadoPor">Mayor Otorgado Por:</label>
+                <input type="text" id="mayorOtorgadoPor" name="mayorOtorgadoPor">
+            
+                <br><br>
+            
+                <label for="mayorPromedio">Mayor Promedio:</label>
+                <input type="number" id="mayorPromedio" name="mayorPromedio" onblur="validarNumeros('mayorPromedio)">
+            
+                <br><br>
+            
+        
+                <br><br>
+         
+                <label for="maximoNivelEducativoPadre">Máximo Nivel Educativo del Padre:</label>
+                <select id="maximoNivelEducativoPadre" name="maximoNivelEducativoPadre">
+                    <option value="nuncaAsistio">Nunca asistió</option>
+                    <option value="primariaIncompleta">Primaria incompleta</option>
+                    <option value="primariaCompleta">Primaria completa</option>
+                    <option value="secundariaIncompleta">Secundaria incompleta</option>
+                    <option value="secundariaCompleta">Secundaria completa</option>
+                    <option value="terciarioIncompleto">Terciario incompleto</option>
+                    <option value="terciarioCompleto">Terciario completo</option>
+                    <option value="universitarioIncompleto">Universitario incompleto</option>
+                    <option value="universitarioCompleto">Universitario completo</option>
+                    <option value="noSabeNoContesta">No Sabe/No Contesta</option>
+                </select>
+        
+                <br><br>
+         
+                <label for="maximoNivelEducativoMadre">Máximo Nivel Educativo de la Madre:</label>
+                <select id="maximoNivelEducativoMadre" name="maximoNivelEducativoMadre">
+                    <option value="nuncaAsistio">Nunca asistió</option>
+                    <option value="primariaIncompleta">Primaria incompleta</option>
+                    <option value="primariaCompleta">Primaria completa</option>
+                    <option value="secundariaIncompleta">Secundaria incompleta</option>
+                    <option value="secundariaCompleta">Secundaria completa</option>
+                    <option value="terciarioIncompleto">Terciario incompleto</option>
+                    <option value="terciarioCompleto">Terciario completo</option>
+                    <option value="universitarioIncompleto">Universitario incompleto</option>
+                    <option value="universitarioCompleto">Universitario completo</option>
+                    <option value="noSabeNoContesta">No Sabe/No Contesta</option>
+                </select>
+                
+                <br><br>
+         
+                
+        </form>
+
+        <h2>TRAYECTORIA OCUPACIONAL</h2>
+        <form class="TrayectoriaOcupacional">
+            <label>Trabaja:</label>
+            <input type="radio" id="siTrabaja" name="trabaja" value="Si" onclick="gestionarCamposTrabajo()"> Sí
+            <input type="radio" id="noTrabaja" name="trabaja" value="No" onclick="gestionarCamposTrabajo()"> No
+            
+            <br><br>
+     
+            <label>Sector de Trabajo:</label>
+                            
+            <br><br>
+     
+            <input type="checkbox" id="educacion" name="sectorTrabajo" value="Educación"> Educación
+            <input type="checkbox" id="gobierno" name="sectorTrabajo" value="Gobierno Sector Público"> Gobierno Sector Público
+            <input type="checkbox" id="servicioFinanciero" name="sectorTrabajo" value="Servicio Financiero"> Servicio Financiero
+            <input type="checkbox" id="turismo" name="sectorTrabajo" value="Turismo"> Turismo
+                    
+            <br><br>
+     
+            <input type="checkbox" id="sectorAgropecuario" name="sectorTrabajo" value="Sector Agropecuario"> Sector Agropecuario
+            <input type="checkbox" id="comercio" name="sectorTrabajo" value="Comercio"> Comercio
+            <input type="checkbox" id="empresa" name="sectorTrabajo" value="Empresa"> Empresa
+            <input type="checkbox" id="servicios" name="sectorTrabajo" value="Servicios"> Servicios
+            <input type="checkbox" id="transporte" name="sectorTrabajo" value="Transporte"> Transporte
+                    
+            <br><br>
+     
+          
+            <input type="checkbox" id="profesionalIndependiente" name="sectorTrabajo" value="Profesional Independiente"> Profesional Independiente
+            <input type="checkbox" id="industriaManufacturera" name="sectorTrabajo" value="Industria Manufacturera"> Industria Manufacturera
+            <input type="checkbox" id="energia" name="sectorTrabajo" value="Energía"> Energía
+                           
+            <br><br>
+     
+            <input type="checkbox" id="salud" name="sectorTrabajo" value="Salud"> Salud
+            <input type="checkbox" id="fuerzasArmadas" name="sectorTrabajo" value="Fuerzas Armadas / Seguridad"> Fuerzas Armadas / Seguridad
+            <input type="checkbox" id="otro" name="sectorTrabajo" value="Otro" onchange="gestionarOtroSectorTrabajo()"> Otro
+
+             <br><br>
+
+            <label for="otroSectorTrabajo">Otro Sector de Trabajo:</label>
+            <input type="text" id="otroSectorTrabajo" name="otroSectorTrabajo">
+            
+            <br><br>
+     
+            <label>Horas de Trabajo Diario:</label>
+            <input type="radio" id="1a3Horas" name="horasTrabajoDiario" value="1 a 3 horas"> 1 a 3 horas
+            <input type="radio" id="4a8Horas" name="horasTrabajoDiario" value="4 a 8 horas"> 4 a 8 horas
+            <input type="radio" id="masDe8Horas" name="horasTrabajoDiario" value="Más de 8 horas"> Más de 8 horas
+            
+            <br><br>
+     
+            <label>¿Pensionado o Jubilado?</label>
+            <input type="radio" id="siPensionadoJubilado" name="pensionadoJubilado" value="Si"> Sí
+            <input type="radio" id="noPensionadoJubilado" name="pensionadoJubilado" value="No" checked> No
+            
+            <br><br>
+     
+        </form>
+    
+    <h2>SITUACIÓN FAMILIAR</h2>
+    <form class="SituacionFamiliar">
+        <label>¿Vive Solo?</label>
+        <br><br>
+        <input type="radio" id="siViveSolo" name="viveSolo" value="Si" onchange="gestionarViveSolo()"> Sí
+        <input type="radio" id="noViveSolo" name="viveSolo" value="No" checked onchange="gestionarViveSolo()"> No
+        <br><br>
+      
+        <label>Vive Con:</label>
+        <br><br>
+        <input type="checkbox" id="viveConPadres" name="viveCon" value="Vive con sus padres"> Vive con sus padres
+        <input type="checkbox" id="viveConConyuge" name="viveCon" value="Con su cónyuge o conviviente"> Con su cónyuge o conviviente
+        <input type="checkbox" id="viveConHijos" name="viveCon" value="Con hijos"> Con hijos
+        <input type="checkbox" id="viveConOtros" name="viveCon" value="Otros"> Otros
+        <br><br>
+      
+        <label>¿Tiene Familiares a Cargo?</label>
+        <br><br>
+        <input type="radio" id="siFamiliaresACargo" name="familiaresACargo" value="Si" onchange="gestionarFamiliaresACargo()"> Sí
+        <input type="radio" id="noFamiliaresACargo" name="familiaresACargo" value="No" checked onchange="gestionarFamiliaresACargo()"> No
+        <br><br>
+      
+        <label>A cargo de:</label>
+        <br><br>
+        <input type="checkbox" id="acargoDePadres" name="acargoDe" value="Padres"> Padres
+        <input type="checkbox" id="acargoDeHijos" name="acargoDe" value="Hijos"> Hijos
+        <input type="checkbox" id="acargoDeOtros" name="acargoDe" value="Otros"> Otros
+        <br><br>
+      
+     
+    </form>
+ 
+
+
+    <h2>CONDICIÓN FRENTE A BECAS O PROGRAMAS</h2>
+<form id="CondicionFrenteBeca">
+    <label>
+        <input type="checkbox" id="ningunoCheckbox" onchange="handleNinguno()">
+        Ninguno
+    </label>
+    <label>
+        <input type="checkbox" name="beca" value="EstimulosEconomicos">
+        Estímulos Económicos (INFD)
+    </label>
+    <label>
+        <input type="checkbox" name="beca" value="BecasBicentenario">
+        Becas Bicentenario
+    </label>
+    <label>
+        <input type="checkbox" name="beca" value="PueblosOriginarios">
+        Pueblos Originarios
+    </label>
+
+    <label>
+        <input type="checkbox" name="beca" value="Progresar">
+        Progresar
+    </label>
+
+    <br><br>
+
+    <label>
+        <input type="checkbox" name="beca" value="AUH">
+        AUH
+    </label>
+    <label>
+        <input type="checkbox" name="beca" value="CompromisoDocente">
+        Compromiso Docente
+    </label>
+    <label>
+        <input type="checkbox" name="beca" value="ProgramaEnvion">
+        Programa Envión
+    </label>
+    <label>
+        <input type="checkbox" name="beca" value="ArgentinaTrabaja">
+        Argentina Trabaja
+    </label>
+    <label>
+        <input type="checkbox" name="beca" value="EllasHacen">
+        Ellas Hacen
+    </label>
+
+    <br><br>
+
+    </form>
+
+
+
+
+    <h2>PRÁCTICAS CULTURALES O COTIDIANAS</h2>
+    <form class="PracticasCulturales">
+                
+        <label>¿Escucha Radio?</label>
+                       
+        <br><br>
+ 
+        <input type="radio" id="siEscuchaRadio" name="escuchaRadio" value="Si"> Sí
+        <input type="radio" id="noEscuchaRadio" name="escuchaRadio" value="No" checked> No
+               
+        <br><br>
+ 
+        <label>¿Mira Televisión?</label>
+                       
+        <br><br>
+ 
+        <input type="radio" id="siMiraTelevision" name="miraTelevision" value="Si"> Sí
+        <input type="radio" id="noMiraTelevision" name="miraTelevision" value="No" checked> No
+               
+        <br><br>
+ 
+        <label>¿Asiste a Obras de Teatro?</label>
+                
+        <br><br>
+
+        <input type="radio" id="siAsisteObrasTeatro" name="asisteObrasTeatro" value="Si"> Sí
+        <input type="radio" id="noAsisteObrasTeatro" name="asisteObrasTeatro" value="No" checked> No
+               
+        <br><br>
+ 
+        <label>¿Asiste a Museos?</label>
+                       
+        <br><br>
+ 
+        <input type="radio" id="siAsisteMuseos" name="asisteMuseos" value="Si"> Sí
+        <input type="radio" id="noAsisteMuseos" name="asisteMuseos" value="No" checked> No
+               
+        <br><br>
+ 
+        <label>¿Asiste a Conciertos?</label>
+                       
+        <br><br>
+ 
+        <input type="radio" id="siAsisteConciertos" name="asisteConciertos" value="Si"> Sí
+        <input type="radio" id="noAsisteConciertos" name="asisteConciertos" value="No" checked> No
+               
+        <br><br>
+ 
+        <label>¿Realiza Lecturas Frecuentes?</label>
+                       
+        <br><br>
+ 
+        <input type="radio" id="siLecturasFrecuentes" name="lecturasFrecuentes" value="Si"> Sí
+        <input type="radio" id="noLecturasFrecuentes" name="lecturasFrecuentes" value="No" checked> No
+               
+        <br><br>
+ 
+        <label>Tipo de Lecturas Frecuentes:</label>
+                       
+        <br><br>
+ 
+        <input type="checkbox" id="diarios" name="tipoLecturaFrecuente" value="Diarios"> Diarios
+        <input type="checkbox" id="revistas" name="tipoLecturaFrecuente" value="Revistas"> Revistas
+        <input type="checkbox" id="libros" name="tipoLecturaFrecuente" value="Libros"> Libros
+               
+        <br><br><br>
+ 
+        <label>¿Realiza Lectura Especializada?</label>
+                       
+        <input type="checkbox" id="lecturaEspecializada" name="lecturaEspecializada" value="Lectura Especializada">
+                         
+        <br>
+      
+        <br><br>
+ 
+        <label for="otrasPracticasCulturales">Otras Prácticas Culturales:</label>
+        <input type="text" id="otrasPracticasCulturales" name="otrasPracticasCulturales">
+               
+        <br><br>
+ 
+        <label>¿Usa Internet?</label>
+                       
+        <br><br>
+ 
+        <input type="radio" id="siUsaInternet" name="usaInternet" value="Si"> Sí
+        <input type="radio" id="noUsaInternet" name="usaInternet" value="No" checked> No
+               
+        <br><br>
+ 
+        <label>Donde Usa Internet:</label>
+                       
+        <br><br>
+ 
+        <input type="checkbox" id="hogar" name="dondeUsaInternet" value="Hogar"> Hogar
+        <input type="checkbox" id="lugarTrabajo" name="dondeUsaInternet" value="Lugar de trabajo"> Lugar de trabajo
+        <input type="checkbox" id="ambitoEducativo" name="dondeUsaInternet" value="Ámbito educativo"> Ámbito educativo
+        <input type="checkbox" id="celular" name="dondeUsaInternet" value="Celular"> Celular
+        <input type="checkbox" id="cyber" name="dondeUsaInternet" value="Cyber"> Cyber
+        <input type="checkbox" id="otroDondeUsaInternet" name="dondeUsaInternet" value="Otro"> Otro
+               
+        <br><br>
+ 
+        <label>¿Usa Redes Sociales?</label>
+                       
+        <br><br>
+ 
+        <input type="radio" id="siUsaRedesSociales" name="usaRedesSociales" value="Si" onchange="actualizarRequeridosRedesSociales()"> Sí
+        <input type="radio" id="noUsaRedesSociales" name="usaRedesSociales" value="No" checked> No
+               
+        <br><br>
+ 
+        <label>Redes Sociales:</label>
+                       
+        <br><br>
+ 
+        <input type="checkbox" id="facebook" name="redesSociales" value="Facebook" onchange="actualizarRequeridosRedesSociales()"> Facebook
+        <input type="checkbox" id="twitter" name="redesSociales" value="Twitter"onchange="actualizarRequeridosRedesSociales()"> Twitter
+        <input type="checkbox" id="linkedin" name="redesSociales" value="Linkedin" onchange="actualizarRequeridosRedesSociales()"> Linkedin
+        <input type="checkbox" id="instagram" name="redesSociales" value="Instagram" onchange="actualizarRequeridosRedesSociales()"> Instagram
+        <input type="checkbox" id="snapchat" name="redesSociales" value="Snapchat" onchange="actualizarRequeridosRedesSociales()"> Snapchat
+        <input type="checkbox" id="otraRedSocial" name="redesSociales" value="Otra" onchange="actualizarRequeridosRedesSociales()"> Otra
+               
+        <br><br>
+ 
+        <label for="sitiosFrecuentados">Sitios Frecuentados:</label>
+                       
+        <br><br>
+ 
+        <input type="checkbox" id="correoElectronico" name="sitiosFrecuentados" value="Correo electrónico " onchange="actualizarRequeridosSitiosFrecuentados()"> Correo electrónico
+        <input type="checkbox" id="buscadores" name="sitiosFrecuentados" value="Buscadores" onchange="actualizarRequeridosSitiosFrecuentados()"> Buscadores
+        <input type="checkbox" id="reservoriosInformacion" name="sitiosFrecuentados" value="Reservorios de información" onchange="actualizarRequeridosSitiosFrecuentados()"> Reservorios de información
+        <input type="checkbox" id="diariosRevistas" name="sitiosFrecuentados" value="Diarios y revistas" onchange="actualizarRequeridosSitiosFrecuentados()"> Diarios y revistas
+        <input type="checkbox" id="portalABC" name="sitiosFrecuentados" value="Portal ABC" onchange="actualizarRequeridosSitiosFrecuentados()"> Portal ABC
+        <input type="checkbox" id="otrosSitiosFrecuentados" name="sitiosFrecuentados" value="Otros" onchange="actualizarRequeridosSitiosFrecuentados()"> Otros
+               
+        <br><br>
+ 
+        <label for="otrosSitiosFrecuentadosText">Otros Sitios Frecuentados:</label>
+                       
+        <br><br>
+ 
+        <input type="text" id="otrosSitiosFrecuentadosText" name="otrosSitiosFrecuentadosText">
+               
+        <br><br>
+ 
+        <label>¿Ha Participado en Alguna de las Siguientes Actividades?</label>
+                       
+        <br><br>
+ 
+        <input type="checkbox" id="haIntegradoConsejoAcademico" name="participaciones" value="Ha integrado el Consejo Académico Institucional"> Ha integrado el Consejo Académico Institucional
+        <input type="checkbox" id="integraActualmenteConsejoAcademico" name="participaciones" value="Integra actualmente el Consejo Académico Institucional"> Integra actualmente el Consejo Académico Institucional
+        <input type="checkbox" id="formoParteCentroEstudiantes" name="participaciones" value="Formó parte del Centro de Estudiantes"> Formó parte del Centro de Estudiantes
+        <input type="checkbox" id="formaParteActualmenteCentroEstudiantes" name="participaciones" value="Forma parte actualmente del Centro de Estudiantes"> Forma parte actualmente del Centro de Estudiantes
+
+        <br><br>
+     
+    </form>
+
+    <h2>FICHA DE SALUD - EN CASO DE EMERGENCIA</h2>
+    <form class="FichaDeSalud">
+        <label>¿Tiene Obra Social Prepaga?</label>
+        <br><br>
+        <input type="radio" id="siObraSocialPrepaga" name="obraSocialPrepaga" value="Si" onclick="document.getElementById('descripcionObraSocial').disabled = !this.checked"> Sí
+        <input type="radio" id="noObraSocialPrepaga" name="obraSocialPrepaga" value="No" checked> No
+        <br><br>
+        <label for="descripcionObraSocial">Descripción de la Obra Social Prepaga:</label>
+        <input type="text" id="descripcionObraSocial" name="descripcionObraSocial" required disabled>
+
+        <br><br>
+
+        <label>¿Recibe Tratamiento Médico?</label>
+        <input type="radio" id="siTratamientoMedico" name="tratamientoMedico" value="Si" onclick="document.getElementById('descripcionTratamientoMedico').disabled = !this.checked"> Sí
+        <input type="radio" id="noTratamientoMedico" name="tratamientoMedico" value="No" checked> No
+        <br><br>
+        <label for="descripcionTratamientoMedico">Descripción del Tratamiento Médico:</label>
+        <input type="text" id="descripcionTratamientoMedico" name="descripcionTratamientoMedico" required disabled>
+
+        <br><br>
+
+        <label>¿Toma Medicación?</label>
+        <br><br>
+        <input type="radio" id="siMedicacion" name="medicacion" value="Si" onclick="document.getElementById('descripcionMedicacion').disabled = !this.checked"> Sí
+        <input type="radio" id="noMedicacion" name="medicacion" value="No" checked> No
+        <br><br>
+        <label for="descripcionMedicacion">Descripción de la Medicación:</label>
+        <input type="text" id="descripcionMedicacion" name="descripcionMedicacion" required disabled>
+
+        <br><br>
+
+        <label>¿Tiene Discapacidad?</label>
+        <br><br>
+        <input type="radio" id="siDiscapacidad" name="discapacidad" value="Si" onclick="document.getElementById('descripcionDiscapacidad').disabled = !this.checked"> Sí
+        <input type="radio" id="noDiscapacidad" name="discapacidad" value="No" checked> No
+        <br><br>
+        <label for="descripcionDiscapacidad">Descripción de la Discapacidad:</label>
+        <input type="text" id="descripcionDiscapacidad" name="descripcionDiscapacidad" required disabled>
+
+        <br><br>
+
+        <label>Estado de la Discapacidad:</label>
+        <br><br>
+        <input type="radio" id="permanente" name="estadoDiscapacidad" value="Permanente" required> Permanente
+        <input type="radio" id="transitoria" name="estadoDiscapacidad" value="Transitoria" required> Transitoria
+
+        <br><br>
+
+        <label>¿Cuenta con Certificado?</label>
+        <br><br>
+        <input type="radio" id="siCertificado" name="certificado" value="Si"> Sí
+        <input type="radio" id="noCertificado" name="certificado" value="No" checked> No
+
+        <br><br>
+
+        <label for="contactoEmergencia">Contacto en Caso de Emergencia:</label>
+        <input type="text" id="contactoEmergencia" name="contactoEmergencia" onblur="validarLetras('contactoEmergencia')"required>
+
+        <br><br>
+
+        <label for="telefonoContacto">Teléfono de Contacto en Caso de Emergencia:</label>
+        <input type="text" id="telefonoContacto" name="telefonoContacto" required>
+
+
+    </form>
+
+    <form class="Carrera">
+        <br><br>
+        <h2>CARRERA A LA QUE SE INSCRIBE:TECNICATURA SUPERIOR EN ADMINISTRACIÓN CONTABLE</h2>
+        <br><br>
+    
+        <!-- Primer año -->
+        <label>Primer año</label>
+        <br><br>
+    
+        <!-- Materias de primer año -->
+        <input type="checkbox" id="matematicaI" name="matematicaI" value="Matemática I"> Matemática I (64 hs)
+        <input type="checkbox" id="computacionI" name="computacionI" value="Computación I"> Computación I (64 hs)
+        <input type="checkbox" id="derecho" name="derecho" value="Derecho"> Derecho (64 hs)
+        <input type="checkbox" id="economia" name="economia" value="Economía"> Economía (64 hs)
+        <br>
+        <input type="checkbox" id="contabilidad" name="contabilidad" value="Contabilidad"> Contabilidad (96 hs)
+        <input type="checkbox" id="sociologiaOrganizacion" name="sociologiaOrganizacion" value="Sociología de la Organización"> Sociología de la Organización (64 hs)
+        <input type="checkbox" id="principiosAdministracion" name="principiosAdministracion" value="Principios de Administración"> Principios de Administración (64 hs)
+        <input type="checkbox" id="metodologiaInvestigacion" name="metodologiaInvestigacion" value="Metodología de la Investigación"> Metodología de la Investigación (32 hs)
+        <input type="checkbox" id="gestionAdministrativoContable" name="gestionAdministrativoContable" value="Gestión Administrativo Contable"> Gestión Administrativo Contable (64 hs)
+        <input type="checkbox" id="ediI" name="ediI" value="EDI I"> EDI I (64 hs)
+    
+        <br><br><br>
+    
+        <!-- Segundo año -->
+        <label>Segundo año</label>
+        <br><br>
+    
+        <!-- Materias de segundo año -->
+        <input type="checkbox" id="matematicaII" name="matematicaII" value="Matemática II"> Matemática II (32 hs)
+        <input type="checkbox" id="estadistica" name="estadistica" value="Estadística"> Estadística (32 hs)
+        <input type="checkbox" id="inglesI" name="inglesI" value="Inglés I"> Inglés I (64 hs)
+        <input type="checkbox" id="computacionII" name="computacionII" value="Computación II"> Computación II (64 hs)
+        <input type="checkbox" id="contabilidadII" name="contabilidadII" value="Contabilidad II"> Contabilidad II (64 hs)
+        <br>
+        <input type="checkbox" id="matematicaFinanciera" name="matematicaFinanciera" value="Matemática Financiera"> Matemática Financiera (64 hs)
+        <input type="checkbox" id="derechoLaboral" name="derechoLaboral" value="Derecho Laboral"> Derecho Laboral (32 hs)
+        <input type="checkbox" id="practicaProfesionalI" name="practicaProfesionalI" value="Práctica Profesional I"> Práctica Profesional I (64 hs)
+        <input type="checkbox" id="derechoComercial" name="derechoComercial" value="Derecho Comercial"> Derecho Comercial (64 hs)
+        <input type="checkbox" id="ediII" name="ediII" value="EDI II"> EDI II (64 hs)
+
+        <br><br><br>
+    
+        <!-- Tercer año -->
+        <label>Tercer año</label>
+        <br><br>
+    
+        <!-- Materias de tercer año -->
+        <input type="checkbox" id="inglesII" name="inglesII" value="Inglés II"> Inglés II (64 hs)
+        <input type="checkbox" id="tecnicaImpositivaLaboral" name="tecnicaImpositivaLaboral" value="Técnica Impositiva y Laboral"> Técnica Impositiva y Laboral (64 hs)
+        <input type="checkbox" id="regimenTributario" name="regimenTributario" value="Régimen Tributario"> Régimen Tributario (64 hs)
+        <input type="checkbox" id="contabilidadIII" name="contabilidadIII" value="Contabilidad III"> Contabilidad III (64 hs)
+        <input type="checkbox" id="costosPresupuestos" name="costosPresupuestos" value="Costos y Presupuestos"> Costos y Presupuestos (64 hs)
+        <br>
+        <input type="checkbox" id="administracionFinanciera" name="administracionFinanciera" value="Administración Financiera"> Administración Financiera (64 hs)
+        <input type="checkbox" id="administracionEstrategica" name="administracionEstrategica" value="Administración Estratégica"> Administración Estratégica (64 hs)
+        <input type="checkbox" id="practicaProfesionalII" name="practicaProfesionalII" value="Práctica Profesional II"> Práctica Profesional II (64 hs)
+        <input type="checkbox" id="ediIII" name="ediIII" value="EDI III"> EDI III (64 hs)
+    
+    </form>
+
+                       
+    <br><br>
+ 
+
+    <button onclick="validarCampos()">Inscribirse a materias</button>
+
+        <br><br> <br><br>
+    <footer>
+
+    </footer>
+
+    <script>
+
+function gestionarCampos() { 
+      var tieneTituloSecundario = document.querySelector('input[name="tituloSecundario"]:checked').value;
+ 
+      var materiasAdeuda = document.getElementById('materiasAdeuda');
+      var descripcionMaterias = document.getElementById('descripcionMaterias');
+      var titulo = document.getElementById('titulo');
+      var orientacion = document.getElementById('orientacion');
+      var otorgadoPor = document.getElementById('otorgadoPor');
+      var anioEgreso = document.getElementById('anioEgreso');
+      var promedio = document.getElementById('promedio');
+ 
+      materiasAdeuda.required = (tieneTituloSecundario === 'No');
+      descripcionMaterias.required = (tieneTituloSecundario === 'No');
+      titulo.required = (tieneTituloSecundario === 'Si');
+      orientacion.required = (tieneTituloSecundario === 'Si');
+      otorgadoPor.required = (tieneTituloSecundario === 'Si');
+      anioEgreso.required = (tieneTituloSecundario === 'Si');
+      promedio.required = (tieneTituloSecundario === 'Si');
+
+      var otroTitulo = document.getElementById('otroTitulo');
+       
+      var mayorOtorgadoPor = document.getElementById('mayorOtorgadoPor');
+      var mayorPromedio = document.getElementById('mayorPromedio');
+ 
+      var mayorTitulo = document.getElementsByName('mayorTitulo');
+ 
+      var seleccionado = false;
+      for (var i = 0; i < mayorTitulo.length; i++) {
+        if (mayorTitulo[i].checked && (mayorTitulo[i].value === 'Terciario' || mayorTitulo[i].value === 'Universitario' || mayorTitulo[i].value === 'Posgrado')) {
+          seleccionado = true;
+          break;
+        }
+      }
+    }
+
+    function gestionarOtroSectorTrabajo() { 
+      var otroSectorTrabajo = document.getElementById('otroSectorTrabajo');
+ 
+      var checkboxOtro = document.getElementById('otro');
+ 
+      otroSectorTrabajo.required = checkboxOtro.checked;
+    }
+
+        function bloquearOpciones() {
+            var opciones = document.getElementsByName("becaPrograma");
+            var ningunoCheckbox = document.getElementById("ninguno");
+
+            if (ningunoCheckbox.checked) {
+                for (var i = 1; i < opciones.length; i++) {
+                    opciones[i].disabled = true;
+                }
+            } else {
+                for (var i = 1; i < opciones.length; i++) {
+                    opciones[i].disabled = false;
+                }
+            }
+        }
+ 
+
+        function gestionarViveSolo() { 
+      var viveSolo = document.querySelector('input[name="viveSolo"]:checked');
+      var viveConCheckboxes = document.querySelectorAll('input[name="viveCon"]');
+       
+      for (var checkbox of viveConCheckboxes) {
+        checkbox.required = viveSolo.value === 'No';
+      }
+    }
+ 
+    function gestionarFamiliaresACargo() { 
+      var familiaresACargo = document.querySelector('input[name="familiaresACargo"]:checked');
+      var acargoDeCheckboxes = document.querySelectorAll('input[name="acargoDe"]');
+       
+      for (var checkbox of acargoDeCheckboxes) {
+        checkbox.required = familiaresACargo.value === 'Si';
+      }
+    }
+    
+    function handleNinguno() {
+        var checkboxes = document.querySelectorAll('input[name="beca"]');
+        var ningunoCheckbox = document.getElementById('ningunoCheckbox');
+
+        checkboxes.forEach(function(checkbox) {
+            checkbox.disabled = ningunoCheckbox.checked;
+            if (ningunoCheckbox.checked) {
+                checkbox.checked = false;
+            }
+        });
+    }
+
+    
+    function actualizarRequeridosSitiosFrecuentados() { 
+    var otrosSitiosFrecuentadosText = document.getElementById('otrosSitiosFrecuentadosText');
+    var sitiosFrecuentados = document.querySelectorAll('input[name="sitiosFrecuentados"]:checked');
+     
+    otrosSitiosFrecuentadosText.required = Array.from(sitiosFrecuentados).some(function (checkbox) {
+        return checkbox.value === 'Otros';
+    });
+}
+ 
+function init() { 
+    var sitiosFrecuentados = document.querySelectorAll('input[name="sitiosFrecuentados"]');
+    sitiosFrecuentados.forEach(function (sitio) {
+        sitio.addEventListener('change', actualizarRequeridosSitiosFrecuentados);
+    });
+ 
+}
+ 
+window.onload = init;
+
+
+
+
+function actualizarRequeridosRedesSociales() { 
+    var facebook = document.getElementById('facebook');
+    var twitter = document.getElementById('twitter');
+    var linkedin = document.getElementById('linkedin');
+    var instagram = document.getElementById('instagram');
+    var snapchat = document.getElementById('snapchat');
+    var otraRedSocial = document.getElementById('otraRedSocial');
+ 
+    var usaRedesSociales = document.querySelector('input[name="usaRedesSociales"]:checked');
+    var checkboxesRedesSociales = [facebook, twitter, linkedin, instagram, snapchat, otraRedSocial];
+
+    checkboxesRedesSociales.forEach(function (checkbox) {
+        checkbox.required = usaRedesSociales && usaRedesSociales.value === 'Si';
+    });
+}
+
+function actualizarRequeridosDondeUsaInternet() { 
+    var hogar = document.getElementById('hogar');
+    var lugarTrabajo = document.getElementById('lugarTrabajo');
+    var ambitoEducativo = document.getElementById('ambitoEducativo');
+    var celular = document.getElementById('celular');
+    var cyber = document.getElementById('cyber');
+    var otroDondeUsaInternet = document.getElementById('otroDondeUsaInternet');
+ 
+    var usaInternet = document.querySelector('input[name="usaInternet"]:checked');
+    var checkboxesDondeUsaInternet = [hogar, lugarTrabajo, ambitoEducativo, celular, cyber, otroDondeUsaInternet];
+
+    checkboxesDondeUsaInternet.forEach(function (checkbox) {
+        checkbox.required = usaInternet && usaInternet.value === 'Si';
+    });
+}
+
+function actualizarRequeridosTipoLecturaFrecuente() { 
+    var diarios = document.getElementById('diarios');
+    var revistas = document.getElementById('revistas');
+    var libros = document.getElementById('libros');
+ 
+    var lecturasFrecuentes = document.querySelector('input[name="lecturasFrecuentes"]:checked');
+    var checkboxesTipoLecturaFrecuente = [diarios, revistas, libros];
+
+    checkboxesTipoLecturaFrecuente.forEach(function (checkbox) {
+        checkbox.required = lecturasFrecuentes && lecturasFrecuentes.value === 'Si';
+    });
+}
+
+function actualizarRequeridosObraSocialPrepaga() { 
+    var siObraSocialPrepaga = document.getElementById('siObraSocialPrepaga');
+    var descripcionObraSocial = document.getElementById('descripcionObraSocial');
+ 
+    descripcionObraSocial.required = siObraSocialPrepaga.checked;
+}
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarRequeridosObraSocialPrepaga();
+});
+ 
+document.getElementById('siObraSocialPrepaga').addEventListener('change', actualizarRequeridosObraSocialPrepaga);
+document.getElementById('noObraSocialPrepaga').addEventListener('change', actualizarRequeridosObraSocialPrepaga);
+
+
+function actualizarRequeridosTratamientoMedico() {
+    
+    var siTratamientoMedico = document.getElementById('siTratamientoMedico');
+    var descripcionTratamientoMedico = document.getElementById('descripcionTratamientoMedico');
+ 
+    descripcionTratamientoMedico.required = siTratamientoMedico.checked;
+}
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarRequeridosTratamientoMedico();
+});
+ 
+document.getElementById('siTratamientoMedico').addEventListener('change', actualizarRequeridosTratamientoMedico);
+document.getElementById('noTratamientoMedico').addEventListener('change', actualizarRequeridosTratamientoMedico);
+
+function actualizarRequeridosMedicacion() { 
+
+    var siMedicacion = document.getElementById('siMedicacion');
+    var descripcionMedicacion = document.getElementById('descripcionMedicacion');
+ 
+    descripcionMedicacion.required = siMedicacion.checked;
+}
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarRequeridosMedicacion();
+});
+ 
+document.getElementById('siMedicacion').addEventListener('change', actualizarRequeridosMedicacion);
+document.getElementById('noMedicacion').addEventListener('change', actualizarRequeridosMedicacion);
+
+
+function actualizarRequeridosDiscapacidad() {
+     
+    var siDiscapacidad = document.getElementById('siDiscapacidad');
+    var descripcionDiscapacidad = document.getElementById('descripcionDiscapacidad');
+
+    
+    var estadoDiscapacidad = document.getElementsByName('estadoDiscapacidad');
+
+     
+    descripcionDiscapacidad.required = siDiscapacidad.checked;
+
+    
+    var seleccionado = false;
+    for (var i = 0; i < estadoDiscapacidad.length; i++) {
+        if (estadoDiscapacidad[i].checked) {
+            seleccionado = true;
+            break;
+        }
+    }
+
+     
+    for (var i = 0; i < estadoDiscapacidad.length; i++) {
+        estadoDiscapacidad[i].required = siDiscapacidad.checked && !seleccionado;
+    }
+}
+
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarRequeridosDiscapacidad();
+});
+
+ 
+document.getElementById('siDiscapacidad').addEventListener('change', actualizarRequeridosDiscapacidad);
+document.getElementById('noDiscapacidad').addEventListener('change', actualizarRequeridosDiscapacidad);
+
+ 
+var estadoDiscapacidad = document.getElementsByName('estadoDiscapacidad');
+for (var i = 0; i < estadoDiscapacidad.length; i++) {
+    estadoDiscapacidad[i].addEventListener('change', actualizarRequeridosDiscapacidad);
+}
+
+function validarLetras(inputId) {
+    var input = document.getElementById(inputId);
+    var regex = /^[A-Za-z]+$/;
+
+    if (regex.test(input.value)) {
+         
+        return true;
+    } else {
+         
+        alert("Por favor, ingrese solo letras en este campo.");
+        input.value = '';   
+        return false;
+    }
+}
+
+function validarNumeros(inputId) {
+    var input = document.getElementById(inputId);
+    var regex = /^[0-9]+$/;
+
+    if (regex.test(input.value)) {
+         
+        return true;
+    } else {
+        
+        alert("Por favor, ingrese solo números en este campo.");
+        input.value = '';   
+        return false;
+    }
+}
+
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarRequeridosTipoLecturaFrecuente();
+});
+ 
+document.getElementsByName('lecturasFrecuentes').forEach(function (radio) {
+    radio.addEventListener('change', actualizarRequeridosTipoLecturaFrecuente);
+});
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarRequeridosDondeUsaInternet();
+});
+ 
+document.getElementsByName('usaInternet').forEach(function (radio) {
+    radio.addEventListener('change', actualizarRequeridosDondeUsaInternet);
+});
+
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarRequeridosRedesSociales();
+});
+
+ 
+document.getElementsByName('usaRedesSociales').forEach(function (radio) {
+    radio.addEventListener('change', actualizarRequeridosRedesSociales);
+});
+
+    
+
+        function validarCampos() {
+       
+      var formularios = document.querySelectorAll('.PracticasCulturales, .CondicionFrenteBeca, .SituacionFamiliar, .TrayectoriaOcupacional, .Formacion, .DatosDelAlumno, .Carrera');
+
+       
+      formularios.forEach(function(formulario) {
+      
+        var camposRequeridos = formulario.querySelectorAll('input[required], select[required], textarea[required]');
+
+        
+        camposRequeridos.forEach(function(campo) {
+          campo.style.border = '1px solid red';
+        });
+
+  
+        camposRequeridos.forEach(function(campo) {
+          if (!campo.value.trim()) {
+            alert('Por favor, llene el campo ' + campo.name + ' en el formulario ' + formulario.className);
+          }
+        });
+      });
+    }
+
+
+
+        function validarFormulario() {
+       
+            return true;
+        }
+    </script>
+
+</body>
+</html>
